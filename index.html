@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>StimTok — Tactile Digital Toys</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <header class="brand">
+          <h1>StimTok</h1>
+          <p>37 tactile digital toys</p>
+        </header>
+        <label class="search-label" for="search">Find your next favorite</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search toys, materials, gestures…"
+          autocomplete="off"
+        />
+        <div id="browse-filters" class="browse-filters"></div>
+        <div class="browse-options">
+          <span id="result-count"></span
+          ><button id="view-toggle" aria-label="Switch to compact list">
+            List</button
+          ><button id="surprise">Surprise me</button>
+        </div>
+        <nav id="menu" aria-label="Toy collection"></nav>
+        <details class="preferences">
+          <summary>Comfort & quality</summary>
+          <label
+            ><input type="checkbox" id="reduce-motion" />Gentle motion</label
+          ><label
+            ><input type="checkbox" id="reduce-flash" />Reduce flashes</label
+          ><label
+            >Quality<select id="quality">
+              <option value="low">Low</option>
+              <option value="balanced">Balanced</option>
+              <option value="high">High</option>
+            </select></label
+          >
+        </details>
+      </aside>
+      <button
+        id="sidebar-toggle"
+        type="button"
+        aria-controls="sidebar"
+        aria-expanded="true"
+        aria-label="Hide toy menu"
+        title="Hide toy menu"
+      >
+        ‹
+      </button>
+      <button id="menu-backdrop" aria-label="Close toy menu" hidden></button>
+      <div id="workspace">
+        <header id="toy-header">
+          <div>
+            <span id="toy-category"></span>
+            <h2 id="toy-name"></h2>
+          </div>
+          <div class="header-actions">
+            <button id="previous-toy" aria-label="Previous toy">←</button
+            ><button id="next-toy" aria-label="Next toy">→</button
+            ><button
+              id="favorite-toy"
+              aria-label="Favorite toy"
+              aria-pressed="false"
+            >
+              ♡</button
+            ><button
+              id="focus-mode"
+              aria-label="Distraction-free view"
+              aria-pressed="false"
+            >
+              Focus
+            </button>
+          </div>
+        </header>
+        <main id="stage"></main>
+        <p id="load-status" role="status"></p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

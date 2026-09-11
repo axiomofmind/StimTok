@@ -1,0 +1,24 @@
+{
+  "name": "stimtok",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:smoke": "node tests/smoke.mjs",
+    "test:archive-additions": "node tests/archive-additions.mjs",
+    "test:silk": "node tests/silk-surface.mjs",
+    "test:tuning": "node tests/tuning-audit.mjs",
+    "test:mobile": "node tests/mobile-audit.mjs",
+    "test:mobile-input": "node tests/mobile-input.mjs",
+    "test:mobile-webkit": "node tests/mobile-webkit.mjs"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "vite": "^5.4.0"
+  }
+}
